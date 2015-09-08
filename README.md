@@ -6,6 +6,8 @@ Its written as a ten week school project by me and five co students ( two progra
 
 My main responsibility was the soundprogramming and I also produced all the sound effects and music. Other than that i worked where I was needed with the front-end
 
+Needs a local webserver to work properly!
+
 See trailer
 https://www.youtube.com/watch?v=eF2Cwg0s5ac
 
