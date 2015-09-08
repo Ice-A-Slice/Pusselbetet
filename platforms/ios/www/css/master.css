@@ -1,0 +1,283 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+html {
+    height: 100%;
+    width: 100%;
+    overflow-y: hidden;
+}
+
+body {
+    background-attachment:fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    text-transform:uppercase;
+    width:500%;
+    background-size: 500% 100%;
+    margin:0px;
+    padding:0px;
+}
+
+.fade_cover {
+    pointer-events: none;
+    background: #FFFFFF;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+.fade_cover img {
+    position: absolute;
+    width: 10%;
+    top: 40%;
+}
+
+.piece{
+    position: absolute;
+    bottom: 1%;
+    left: 5%; 
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+}
+
+.piece img {
+}
+
+.drop-box {
+    width: 2px;
+    height: 2px;
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+}
+
+.pieces {
+    position: absolute;
+    height: 60%;
+    top: 10%;
+}
+
+.piece.unfocused img {
+    opacity: 0.4;
+}
+
+.letter_frame {
+    position:absolute;
+    height: 100%;
+    z-index: 8;
+}
+
+.demo {
+}
+
+.demo .pep {
+  z-index: 10;
+}
+
+.demo .drop-target {
+  /*background: #252525;*/
+  height: 5%;
+  width: 5%;
+  position: absolute;
+}
+
+.demo .drop-target.pep-dpa {
+
+/*  background: #992212;*/
+}
+
+.home_button {
+    position: fixed;
+    height: 10%;
+    top: 3%;
+    left: 1%;
+    border-radius: 100%;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.home_button:active, .home_button:hover{
+    top: 3.5%; 
+}
+
+.home_button img {
+    height: 80%;
+}
+
+.mute_button {
+    position: fixed;
+    height: 10%;
+    top: 15%;
+    left: 1%;
+    border-radius: 100%;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.mute_button:active, .mute_button:hover{
+    top: 15.5%;
+}
+.mute_button img {
+    height: 80%;
+}
+
+.speak_button {
+    position: fixed;
+    height: 10%;
+    bottom: 3%;
+    left: 1%;
+    border-radius: 100%;
+    cursor: pointer;
+    z-index: 12;
+}
+
+.speak_button:active, .speak_button:hover{
+    bottom: 2.5%;
+}
+
+.speak_button img {
+    height: 100%;
+}
+
+.explosion_div {
+    position: absolute;
+    background: url(../img/explo.gif);
+    width: 700px;
+    height: 500px; 
+    top: 0%;
+    left: 10%;
+}
+
+.next {
+    position: absolute;
+    display: none;
+    top: 45%;
+    height: 10%;
+    opacity: 0;
+    z-index: 4;
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+}
+
+.next {
+    -webkit-animation: arrow 1s linear infinite;
+    -moz-animation: arrow 1s linear infinite;
+    -o-animation: arrow 1s linear infinite;
+    animation: arrow 1s linear infinite;
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+}
+
+@-webkit-keyframes arrow {
+    0% {
+
+    } 50% {
+        margin-left: +20px;
+    } 100% {
+        margin-right: -20px;
+    }
+}
+@-moz-keyframes arrow {
+    0% {
+    } 50% {
+        margin-left: +20px;
+    } 100% {
+        margin-right: -20px;
+    }
+}
+@-o-keyframes arrow {
+    0% {
+    } 50% {
+        margin-left: +20px;
+    } 100% {
+        margin-right: -20px;
+    }
+}
+@keyframes arrow {
+    0% {
+    } 50% {
+        margin-left: +20px;
+    } 100% {
+        margin-right: -20px;
+    }
+}
+
+.medal {
+    position:absolute;
+    left: 90%;
+    top: -100%;
+    width: 10%;
+    z-index: 4;
+    -webkit-transform-origin: 50% 10%;
+    -webkit-animation:  swing 4s ease-in-out infinite;
+    -moz-transform-origin: 50% 10%;
+    -moz-animation: swing 4s ease-in-out infinite;
+    -ms-transform-origin: 50% 10%;
+    -ms-animation: swing 4s ease-in-out infinite;
+    -o-transform-origin: 50% 10%;
+    -o-animation: swing 4s ease-in-out infinite;
+    transform-origin: 50% 10%;
+    animation: swing 4s ease-in-out infinite;
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+}
+
+@keyframes          swing {0% {transform: rotate(20deg); } 50% {transform: rotate(-20deg); } 100%{transform: rotate(20deg); } }
+@-o-keyframes       swing {0% {-o-transform: rotate(20deg); } 50% {-o-transform: rotate(-20deg); } 100%{-o-transform: rotate(20deg); } }
+@-ms-keyframes      swing {0% {-ms-transform: rotate(20deg); } 50% {-ms-transform: rotate(-20deg); } 100%{-ms-transform: rotate(20deg); } }
+@-webkit-keyframes  swing {0% {-webkit-transform: rotate(20deg); } 50% {-webkit-transform: rotate(-20deg); } 100%{-webkit-transform: rotate(20deg); } }
+
+#things_container {
+    pointer-events:none;
+}
+
+.between > div {
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -o-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    pointer-events: none;
+    height: 100%;
+    width: 1000px;
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+

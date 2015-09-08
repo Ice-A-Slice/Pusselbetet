@@ -1,0 +1,88 @@
+body {
+    background-attachment:fixed;
+    height:100%;
+    -webkit-touch-callout: none;
+    -webkit-text-size-adjust: none;
+    -webkit-user-select: none;
+    background: #528e7e;
+    background: -moz-linear-gradient(top,  #528e7e 1%, #ffffff 50%, #273f1e 50%, #295419 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#528e7e), color-stop(50%,#ffffff), color-stop(50%,#273f1e), color-stop(100%,#295419));
+    background: -webkit-linear-gradient(top,  #528e7e 1%, #ffffff 50%, #273f1e 50%, #295419 100%);
+    background: -o-linear-gradient(top,  #528e7e 1%, #ffffff 50%, #273f1e 50%, #295419 100%);
+    background: -ms-linear-gradient(top,  #528e7e 1%, #ffffff 50%, #273f1e 50%, #295419 100%);
+    background: linear-gradient(to bottom,  #528e7e 1%, #ffffff 50%, #273f1e 50%, #295419 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#528e7e', endColorstr='#295419',GradientType=0 );
+}
+
+.trees_front {
+    background: url(../img/jungle/env/4_skog_front.png) repeat-x center top;
+    position: absolute;
+    left: 0%;
+    bottom: 50%;
+    height: 43px;
+    width: 500%;
+}
+
+.trees_back {
+    background: url(../img/jungle/env/4_skog_back.png) repeat-x center top;
+    position: absolute;
+    left: 0%;
+    bottom: 50%;
+    height: 83px;
+    width: 500%;
+}
+
+.mountain_front {
+    background: url(../img/jungle/env/4_berg_front.png) repeat-x center top;
+    position: absolute;
+    left: 0%;
+    bottom: 50%;
+    height: 250px;
+    width: 500%;
+}
+
+.mountain_back {
+    background: url(../img/jungle/env/4_berg_back.png) repeat-x center top;
+    position: absolute;
+    left: 0%;
+    bottom: 50%;
+    height: 128px;
+    width: 500%;
+}
+
+.ground {
+    background: url(../img/jungle/env/mark.png) repeat-x center top;
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    height: 50%;
+    width: 500%;
+    text-align: center;
+}
+
+#things_container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#things_container > div {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#canvas {
+    position: absolute;
+    height: 100%;
+    width: 500%;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.next {
+    z-index: 3;
+}
